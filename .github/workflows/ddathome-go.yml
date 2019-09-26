@@ -19,7 +19,7 @@ jobs:
       - name: Build the Docker image
         uses: actions/docker/cli@master
         with:
-          args: build -t $GITHUB_WORKFLOW DDatHome-go/
+          args: build -t $GITHUB_WORKFLOW .
       - name: Push the Docker image
         uses: actions/docker/cli@master
         with:
