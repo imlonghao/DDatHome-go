@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - .github/workflows/ddathome-go.yml
-      - Dockerfile
-      - go.mod
-      - go.sum
-      - main.go
 
 jobs:
   build:
@@ -25,7 +19,7 @@ jobs:
       - name: Build the Docker image
         uses: actions/docker/cli@master
         with:
-          args: build -t $GITHUB_WORKFLOW bird/
+          args: build -t $GITHUB_WORKFLOW DDatHome-go/
       - name: Push the Docker image
         uses: actions/docker/cli@master
         with:
